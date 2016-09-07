@@ -15,6 +15,10 @@
 		11BCD5A21D7FF29D00A2C0C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11BCD5A01D7FF29D00A2C0C0 /* LaunchScreen.storyboard */; };
 		11BCD5AD1D7FF29D00A2C0C0 /* Task_Manager_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BCD5AC1D7FF29D00A2C0C0 /* Task_Manager_1Tests.swift */; };
 		11BCD5B81D7FF29D00A2C0C0 /* Task_Manager_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BCD5B71D7FF29D00A2C0C0 /* Task_Manager_1UITests.swift */; };
+		11BCD5C61D7FF9D800A2C0C0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BCD5C51D7FF9D800A2C0C0 /* User.swift */; };
+		11BCD5C81D80002E00A2C0C0 /* UserDataSingletonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BCD5C71D80002E00A2C0C0 /* UserDataSingletonClass.swift */; };
+		11BCD5CB1D80009700A2C0C0 /* testClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BCD5CA1D80009700A2C0C0 /* testClass.swift */; };
+		11BCD5CD1D801D4700A2C0C0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BCD5CC1D801D4700A2C0C0 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		11BCD5B31D7FF29D00A2C0C0 /* Task Manager 1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Task Manager 1UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11BCD5B71D7FF29D00A2C0C0 /* Task_Manager_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_Manager_1UITests.swift; sourceTree = "<group>"; };
 		11BCD5B91D7FF29D00A2C0C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11BCD5C51D7FF9D800A2C0C0 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		11BCD5C71D80002E00A2C0C0 /* UserDataSingletonClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataSingletonClass.swift; sourceTree = "<group>"; };
+		11BCD5CA1D80009700A2C0C0 /* testClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testClass.swift; sourceTree = "<group>"; };
+		11BCD5CC1D801D4700A2C0C0 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +109,15 @@
 			children = (
 				11BCD5941D7FF29D00A2C0C0 /* AppDelegate.swift */,
 				11BCD5961D7FF29D00A2C0C0 /* ViewController.swift */,
+				11BCD5C71D80002E00A2C0C0 /* UserDataSingletonClass.swift */,
+				11BCD5CC1D801D4700A2C0C0 /* SignUpViewController.swift */,
+				11BCD5C51D7FF9D800A2C0C0 /* User.swift */,
 				11BCD5981D7FF29D00A2C0C0 /* Main.storyboard */,
 				11BCD59E1D7FF29D00A2C0C0 /* Assets.xcassets */,
 				11BCD5A01D7FF29D00A2C0C0 /* LaunchScreen.storyboard */,
 				11BCD5A31D7FF29D00A2C0C0 /* Info.plist */,
 				11BCD59B1D7FF29D00A2C0C0 /* Task_Manager_1.xcdatamodeld */,
+				11BCD5CA1D80009700A2C0C0 /* testClass.swift */,
 			);
 			path = "Task Manager 1";
 			sourceTree = "<group>";
@@ -259,8 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11BCD5C61D7FF9D800A2C0C0 /* User.swift in Sources */,
+				11BCD5CD1D801D4700A2C0C0 /* SignUpViewController.swift in Sources */,
 				11BCD59D1D7FF29D00A2C0C0 /* Task_Manager_1.xcdatamodeld in Sources */,
+				11BCD5C81D80002E00A2C0C0 /* UserDataSingletonClass.swift in Sources */,
 				11BCD5971D7FF29D00A2C0C0 /* ViewController.swift in Sources */,
+				11BCD5CB1D80009700A2C0C0 /* testClass.swift in Sources */,
 				11BCD5951D7FF29D00A2C0C0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

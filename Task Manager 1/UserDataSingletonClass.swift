@@ -9,5 +9,7 @@
 import UIKit
 
 class UserDataSingletonClass: NSObject {
-
+    
+        static var userDataArray = Array<User>()
+    
 }

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8E400EA33582469B41A7A16E6BBCA66A7C4F5766",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "CB322105408F108380224A4352B12A6B45982038" : 0,
+    "8E400EA33582469B41A7A16E6BBCA66A7C4F5766" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "24BF5D3B-3DDF-4FE4-BF30-D4128FEEE9DC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "CB322105408F108380224A4352B12A6B45982038" : "",
+    "8E400EA33582469B41A7A16E6BBCA66A7C4F5766" : "Task%20Manager%201\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Task Manager 1",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Task Manager 1.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/absali6693\/TaskManagerSwift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8E400EA33582469B41A7A16E6BBCA66A7C4F5766"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/absali6693\/IOSViewConnectivity.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CB322105408F108380224A4352B12A6B45982038"
+    }
+  ]
+}
