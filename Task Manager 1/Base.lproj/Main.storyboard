@@ -23,18 +23,18 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9OC-6l-Sz2" userLabel="Text Field View">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uSP-cs-lsf" userLabel="Username Text Field">
-                                                <rect key="frame" x="8" y="81" width="304" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="M1p-dV-0h2"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xAy-Hm-GT6" userLabel="Password Text Field">
                                                 <rect key="frame" x="8" y="140" width="304" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="4JK-cn-Syy"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uSP-cs-lsf" userLabel="Username Text Field">
+                                                <rect key="frame" x="8" y="81" width="304" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="M1p-dV-0h2"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -109,6 +109,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="fpE-Ii-lS3"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="passwordTextField" destination="xAy-Hm-GT6" id="NgM-nb-hdz"/>
+                        <outlet property="usernameTextField" destination="uSP-cs-lsf" id="jbw-15-bVa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -228,9 +232,9 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="emailTextField" destination="xgh-7e-ctP" id="Dsm-ue-XxW"/>
-                        <outlet property="nameTextField" destination="8CN-Mc-haW" id="gXu-Xg-kWB"/>
-                        <outlet property="passwordtextField" destination="63c-Bb-WCa" id="1oz-BQ-XzF"/>
-                        <outlet property="usernametextField" destination="u8T-yV-ega" id="2BI-8K-BTq"/>
+                        <outlet property="nameTextField" destination="bYh-2k-iBf" id="vcL-S4-eVw"/>
+                        <outlet property="passwordTextField" destination="63c-Bb-WCa" id="3qc-Ad-4rV"/>
+                        <outlet property="usernameTextField" destination="u8T-yV-ega" id="xdi-B3-8GN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9o3-mU-rcp" userLabel="First Responder" sceneMemberID="firstResponder"/>

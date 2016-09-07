@@ -11,9 +11,9 @@ import UIKit
 class SignUpViewController: UIViewController {
    
     @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordtextField: UITextField!
-    @IBOutlet weak var usernametextField: UITextField!
-    @IBOutlet weak var nameTextField: UIView!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +29,11 @@ class SignUpViewController: UIViewController {
     // MARK: - IOAction
     
     @IBAction func signInButtonClickAction(sender: AnyObject) {
+        let user = User(name: nameTextField.text!,username: usernameTextField.text!,password: passwordTextField.text!,email: emailTextField.text!)
+        UserDataSingletonClass.userDataArray.append(user)
+        //To change
+        print(UserDataSingletonClass.userDataArray.count)
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
 

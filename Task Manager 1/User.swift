@@ -24,9 +24,4 @@ class User: NSObject {
     func getUser() -> User {
         return self
     }
-    
-    func  getName() {
-        print(self.name)
-    }
-
 }
