@@ -30,7 +30,8 @@ class SignUpViewController: UIViewController {
     
     @IBAction func signInButtonClickAction(sender: AnyObject) {
         let user = User(name: nameTextField.text!,username: usernameTextField.text!,password: passwordTextField.text!,email: emailTextField.text!)
-        UserDataSingletonClass.userDataArray.append(user)
+        let userDataSingletonclass = UserDataSingletonClass()
+        userDataSingletonclass.addUser(user)
         //To change
         print(UserDataSingletonClass.userDataArray.count)
         self.navigationController?.popViewControllerAnimated(true)

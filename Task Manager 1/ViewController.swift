@@ -28,6 +28,11 @@ class ViewController: UIViewController {
     
     // MARK: - IBActions
     
+    @IBAction func signInButtonClickAction(sender: AnyObject) {
+        let predicate = NSPredicate(format: "getUsername = %@ AND getPassword = %@", usernameTextField.text!, passwordTextField.text!)
+        let filteredArray = (UserDataSingletonClass.userDataArray).filter { predicate.evaluateWithObject($0) }
+        print(filteredArray)
+    }
     
     /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "signUpSegue" {

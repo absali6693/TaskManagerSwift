@@ -24,4 +24,12 @@ class User: NSObject {
     func getUser() -> User {
         return self
     }
+    
+    func getUsername() -> String {
+        return username
+    }
+    
+    func getPassword() -> String {
+        return password
+    }
 }

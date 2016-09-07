@@ -12,4 +12,7 @@ class UserDataSingletonClass: NSObject {
     
         static var userDataArray = Array<User>()
     
+    func addUser(user: User) {
+        UserDataSingletonClass.userDataArray.append(user)
+    }
 }
