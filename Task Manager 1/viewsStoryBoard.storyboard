@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Display View Controller-->
+        <scene sceneID="tfl-40-gKy">
+            <objects>
+                <viewController storyboardIdentifier="DisplayViewController" id="GTF-MH-h3r" customClass="DisplayViewController" customModule="Task_Manager_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CeJ-bS-X4M"/>
+                        <viewControllerLayoutGuide type="bottom" id="48g-5M-rig"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nxk-gN-KRR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ub-S8-iPI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0g-b1-ZyZ" userLabel="Add Button">
+                                        <rect key="frame" x="274" y="69" width="30" height="30"/>
+                                        <color key="backgroundColor" red="0.85098039219999999" green="0.26274509800000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="ZAq-o3-n9B"/>
+                                            <constraint firstAttribute="width" constant="30" id="iI7-dG-Am9"/>
+                                        </constraints>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="B4f-Wq-hgn" kind="show" id="Nn8-4g-BYq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1843137255" green="0.2274509804" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="X0g-b1-ZyZ" secondAttribute="trailing" constant="16" id="2d9-4b-d5S"/>
+                                    <constraint firstItem="X0g-b1-ZyZ" firstAttribute="top" secondItem="1ub-S8-iPI" secondAttribute="top" constant="69" id="Plm-dZ-tpK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="48g-5M-rig" firstAttribute="top" secondItem="1ub-S8-iPI" secondAttribute="bottom" id="H4b-JW-bkn"/>
+                            <constraint firstItem="1ub-S8-iPI" firstAttribute="top" secondItem="nxk-gN-KRR" secondAttribute="top" id="ao4-jb-YU9"/>
+                            <constraint firstAttribute="trailing" secondItem="1ub-S8-iPI" secondAttribute="trailing" id="bQq-R9-NVj"/>
+                            <constraint firstItem="1ub-S8-iPI" firstAttribute="leading" secondItem="nxk-gN-KRR" secondAttribute="leading" id="iMd-QH-Ubw"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gPd-d6-O4Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="366" y="304"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4oi-aI-Dte">
+            <objects>
+                <viewController id="B4f-Wq-hgn" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tSW-cR-7Q0"/>
+                        <viewControllerLayoutGuide type="bottom" id="1wK-3Y-gOz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fqv-Xe-46M">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cMg-B2-cLK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="761" y="304"/>
+        </scene>
+    </scenes>
+</document>

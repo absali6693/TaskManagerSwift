@@ -10,14 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak private var usernameTextField: UITextField!
+    @IBOutlet weak private var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //To change
         let text1 = testClass()
         text1.test()
+        print(self.navigationController?.viewControllers)
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -31,6 +32,14 @@ class ViewController: UIViewController {
     @IBAction func signInButtonClickAction(sender: AnyObject) {
         let predicate = NSPredicate(format: "getUsername = %@ AND getPassword = %@", usernameTextField.text!, passwordTextField.text!)
         let filteredArray = (UserDataSingletonClass.userDataArray).filter { predicate.evaluateWithObject($0) }
+        if filteredArray.count == 1 {
+            //let user =  filteredArray.last
+            let storyboard: UIStoryboard = UIStoryboard(name: "viewsStoryBoard", bundle: nil)
+            let displayViewController = storyboard.instantiateViewControllerWithIdentifier("DisplayViewController")
+            self.navigationController?.viewControllers.append(displayViewController)
+            self.navigationController?.viewControllers.removeAtIndex(0)
+            //self.showViewController(displayViewController, sender: self)
+        }
         print(filteredArray)
     }
     

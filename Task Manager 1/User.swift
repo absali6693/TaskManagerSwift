@@ -25,11 +25,20 @@ class User: NSObject {
         return self
     }
     
+    func getName() -> String {
+        return self.name
+    }
+    
     func getUsername() -> String {
-        return username
+        return self.username
     }
     
     func getPassword() -> String {
-        return password
+        return self.password
     }
+    
+    func getEmail() -> String {
+        return self.email
+    }
+    
 }

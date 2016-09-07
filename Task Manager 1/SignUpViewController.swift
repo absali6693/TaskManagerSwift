@@ -10,14 +10,14 @@ import UIKit
 
 class SignUpViewController: UIViewController {
    
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak private var emailTextField: UITextField!
+    @IBOutlet weak private var passwordTextField: UITextField!
+    @IBOutlet weak private var usernameTextField: UITextField!
+    @IBOutlet weak private var nameTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(self.navigationController?.viewControllers)
         // Do any additional setup after loading the view.
     }
 
