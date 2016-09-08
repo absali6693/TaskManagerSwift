@@ -83,6 +83,13 @@ class DisplayViewController: UIViewController, AddTaskDelegate, UITableViewDataS
         }
     }
     
+    @IBAction func logoutButtonClicked(sender: AnyObject) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let signInViewController = storyboard.instantiateViewControllerWithIdentifier("SignInViewController") as! ViewController
+        self.navigationController?.viewControllers.append(signInViewController)
+        self.navigationController?.viewControllers.removeAtIndex(0)
+    }
+
 
 
     /*

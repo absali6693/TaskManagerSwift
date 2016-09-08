@@ -36,8 +36,5 @@ class TaskViewCell: UITableViewCell {
         delegate?.deleteTaskAtIndex(index)
         
     }
-    
-    @IBAction func editButtonClick(sender: AnyObject) {
-    }
-    
+
 }
