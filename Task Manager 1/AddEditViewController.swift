@@ -9,14 +9,35 @@
 import UIKit
 
 class AddEditViewController: UIViewController {
+    
     @IBOutlet weak var task: UITextField!
     @IBOutlet weak var descriptionOfTask: UITextField!
     @IBOutlet weak var timeOfTask: UITextField!
+    @IBOutlet weak var addEditButton : UIButton!
+    var indexToBeEdited: Int?
+    var UserTask: Task?
+    
     var delegate: AddTaskDelegate?
+    var edit: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.task.text = UserTask?.getTask()
+        self.descriptionOfTask.text = UserTask?.getDescriptionOfTask()
+        self.timeOfTask.text = UserTask?.getTimeOfTask()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        if edit == true {
+            self.title = "Edit Task"
+            addEditButton.setTitle("Edit", forState: UIControlState.Normal)
+        }
+        else {
+            self.title = "Add Task"
+            addEditButton.setTitle("Add", forState: UIControlState.Normal)
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -26,15 +47,24 @@ class AddEditViewController: UIViewController {
     
     
     @IBAction func addEditTask(sender: AnyObject) {
-           let task = Task(task: self.task.text!,descriptionOfTask: self.descriptionOfTask.text!, timeOfTask: self.timeOfTask.text!)
-        delegate?.addTaskToUser(task)
+        let task = Task(task: self.task.text!,descriptionOfTask: self.descriptionOfTask.text!, timeOfTask: self.timeOfTask.text!)
+        if edit == false {
+            delegate?.addTaskToUser(task)
+        }
+        else {
+            edit = false
+            delegate?.editTaskOfUser(task , index: indexToBeEdited!)
+        }
         self.navigationController?.popViewControllerAnimated(true)
     }
     
-    func addTask(tasks: Array<Task>)
+    func editTask(task: Task,index: Int)
     {
-        
+        edit = true
+        indexToBeEdited = index
+        UserTask = task
     }
+    
     /*
      // MARK: - Navigation
      

@@ -55,4 +55,8 @@ class User: NSObject {
         self.tasks.removeAtIndex(index)
     }
     
+    func editTaskAtIndex(task: Task , index: Int) {
+        self.tasks[index] = task
+    }
+    
 }

@@ -15,6 +15,8 @@ class DisplayViewController: UIViewController, AddTaskDelegate, UITableViewDataS
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        print(navigationController?.viewControllers)
+        self.title = "Task Manager"
         // Do any additional setup after loading the view.
     }
 
@@ -60,11 +62,24 @@ class DisplayViewController: UIViewController, AddTaskDelegate, UITableViewDataS
         tableView.reloadData()
     }
     
+    func editTaskOfUser(task: Task , index: Int) {
+        user?.editTaskAtIndex(task, index: index)
+        tableView.reloadData()
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if segue.identifier == "addEditSegue" {
+        if segue.identifier == "addSegue" {
            let addEditViewController = segue.destinationViewController as! AddEditViewController
             addEditViewController.delegate = self
+        }
+        
+        if segue.identifier == "editSegue" {
+            let addEditViewController = segue.destinationViewController as! AddEditViewController
+            addEditViewController.delegate = self
+            let editButton:UIButton = sender as! UIButton
+            let index:Int = editButton.tag
+            addEditViewController.editTask((user?.getTasks()[index])!,index: index)
         }
     }
     
