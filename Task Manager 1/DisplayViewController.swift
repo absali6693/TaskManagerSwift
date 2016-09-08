@@ -32,10 +32,13 @@ class DisplayViewController: UIViewController, AddTaskDelegate, UITableViewDataS
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell:TaskViewCell = (tableView.dequeueReusableCellWithIdentifier("Cell1", forIndexPath: indexPath) as? TaskViewCell)!
+        let cell:TaskViewCell = (tableView.dequeueReusableCellWithIdentifier("TaskCell", forIndexPath: indexPath) as? TaskViewCell)!
         cell.setTask((user?.getTasks()[indexPath.row].getTask())!)
         cell.setDescriptionOfTask((user?.getTasks()[indexPath.row].getDescriptionOfTask())!)
         cell.setTime((user?.getTasks()[indexPath.row].getTimeOfTask())!)
+        cell.deleteButton.tag = indexPath.row
+        cell.editButton.tag = indexPath.row
+        cell.delegate = self
         //cell.textLabel?.text = user?.getTasks()[indexPath.row].getTask()
         return cell
     }
@@ -49,6 +52,11 @@ class DisplayViewController: UIViewController, AddTaskDelegate, UITableViewDataS
         print(ustask?.count)
         //let ust = ustask?.last
         print(ustask)
+        tableView.reloadData()
+    }
+    
+    func deleteTaskAtIndex(index: Int) {
+        user?.deleteTaskAtIndex(index)
         tableView.reloadData()
     }
     

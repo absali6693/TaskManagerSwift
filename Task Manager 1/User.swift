@@ -51,4 +51,8 @@ class User: NSObject {
         self.tasks.append(task)
     }
     
+    func deleteTaskAtIndex(index: Int) {
+        self.tasks.removeAtIndex(index)
+    }
+    
 }

@@ -9,5 +9,6 @@
 import Foundation
 
 protocol  AddTaskDelegate {
-    func addTaskToUser(task :Task)
+    func addTaskToUser(task: Task)
+    func deleteTaskAtIndex(index: Int)
 }

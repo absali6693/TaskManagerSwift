@@ -38,7 +38,7 @@
                                         <rect key="frame" x="0.0" y="121" width="320" height="359"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell1" id="Xgp-dp-7yb" customClass="TaskViewCell" customModule="Task_Manager_1" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskCell" id="Xgp-dp-7yb" customClass="TaskViewCell" customModule="Task_Manager_1" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xgp-dp-7yb" id="UCJ-rA-8Oz">
@@ -63,10 +63,28 @@
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3d-dI-EyA">
+                                                            <rect key="frame" x="266" y="-3" width="46" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                            <state key="normal" title="Delete"/>
+                                                            <connections>
+                                                                <action selector="deleteButtonClick:" destination="Xgp-dp-7yb" eventType="touchUpInside" id="JHw-8p-hTP"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHT-cG-1l5">
+                                                            <rect key="frame" x="266" y="16" width="46" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                            <state key="normal" title="Edit"/>
+                                                            <connections>
+                                                                <action selector="editButtonClick:" destination="Xgp-dp-7yb" eventType="touchUpInside" id="0eU-9D-CLl"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                 </tableViewCellContentView>
                                                 <connections>
+                                                    <outlet property="deleteButton" destination="H3d-dI-EyA" id="JKf-f3-9L2"/>
                                                     <outlet property="descriptionOfTaskLabel" destination="FaV-ho-Ldm" id="KOM-eH-8H8"/>
+                                                    <outlet property="editButton" destination="KHT-cG-1l5" id="Ga2-P7-vLw"/>
                                                     <outlet property="taskLabel" destination="wFy-1c-8zR" id="bMo-8e-eWs"/>
                                                     <outlet property="timeOfTask" destination="gOF-fE-qGq" id="WcI-vd-eKG"/>
                                                 </connections>
