@@ -9,13 +9,14 @@
 import UIKit
 
 class DisplayViewController: UIViewController, AddTaskDelegate, UITableViewDataSource, UITableViewDelegate {
-    var user: User?
-    @IBOutlet weak var tableView: UITableView!
+    
+    private var user: User?
+    @IBOutlet weak private var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        print(navigationController?.viewControllers)
         self.title = "Task Manager"
         // Do any additional setup after loading the view.
     }
@@ -47,13 +48,6 @@ class DisplayViewController: UIViewController, AddTaskDelegate, UITableViewDataS
     
     func addTaskToUser(task: Task) {
         self.user?.addTasks(task)
-        let userdataarray = (UserDataSingletonClass.userDataArray)
-        print(userdataarray.count)
-        let us = userdataarray.last
-        let ustask = us?.getTasks()
-        print(ustask?.count)
-        //let ust = ustask?.last
-        print(ustask)
         tableView.reloadData()
     }
     
@@ -68,7 +62,6 @@ class DisplayViewController: UIViewController, AddTaskDelegate, UITableViewDataS
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
         if segue.identifier == "addSegue" {
            let addEditViewController = segue.destinationViewController as! AddEditViewController
             addEditViewController.delegate = self
@@ -85,7 +78,7 @@ class DisplayViewController: UIViewController, AddTaskDelegate, UITableViewDataS
     
     @IBAction func logoutButtonClicked(sender: AnyObject) {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let signInViewController = storyboard.instantiateViewControllerWithIdentifier("SignInViewController") as! ViewController
+        let signInViewController = storyboard.instantiateViewControllerWithIdentifier("SignInViewController") as! SignInViewController
         self.navigationController?.viewControllers.append(signInViewController)
         self.navigationController?.viewControllers.removeAtIndex(0)
     }

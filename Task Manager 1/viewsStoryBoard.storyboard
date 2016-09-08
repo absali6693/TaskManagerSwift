@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Display View Controller-->
@@ -45,42 +46,92 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFy-1c-8zR">
-                                                            <rect key="frame" x="8" y="17" width="42" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFy-1c-8zR">
+                                                            <rect key="frame" x="0.0" y="-6" width="50" height="66"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="50" id="Dmf-81-mi0"/>
+                                                                <constraint firstAttribute="height" constant="66" id="dJb-6A-YOD"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="dJb-6A-YOD"/>
+                                                                </mask>
+                                                            </variation>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FaV-ho-Ldm">
-                                                            <rect key="frame" x="58" y="8" width="209" height="18"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOF-fE-qGq">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOF-fE-qGq">
                                                             <rect key="frame" x="58" y="34" width="209" height="18"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="18" id="fSx-C0-Oze"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHT-cG-1l5">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHT-cG-1l5">
                                                             <rect key="frame" x="266" y="28" width="46" height="24"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="24" id="UhI-Ei-E4R"/>
+                                                                <constraint firstAttribute="width" constant="46" id="VD7-kt-uXY"/>
+                                                                <constraint firstAttribute="height" constant="24" id="oTm-4w-OMl"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <state key="normal" title="Edit"/>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="UhI-Ei-E4R"/>
+                                                                </mask>
+                                                            </variation>
                                                             <connections>
                                                                 <action selector="editButtonClick:" destination="Xgp-dp-7yb" eventType="touchUpInside" id="0eU-9D-CLl"/>
                                                                 <segue destination="B4f-Wq-hgn" kind="show" identifier="editSegue" id="m3I-bD-kuP"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3d-dI-EyA">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3d-dI-EyA">
                                                             <rect key="frame" x="266" y="2" width="46" height="24"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="24" id="HvL-dH-3be"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <state key="normal" title="Delete"/>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="HvL-dH-3be"/>
+                                                                </mask>
+                                                            </variation>
                                                             <connections>
                                                                 <action selector="deleteButtonClick:" destination="Xgp-dp-7yb" eventType="touchUpInside" id="JHw-8p-hTP"/>
                                                             </connections>
                                                         </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FaV-ho-Ldm">
+                                                            <rect key="frame" x="58" y="8" width="209" height="18"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="18" id="Qwz-9V-Lyh"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="KHT-cG-1l5" firstAttribute="top" secondItem="H3d-dI-EyA" secondAttribute="bottom" constant="2" id="0Ux-G3-6lo"/>
+                                                        <constraint firstItem="KHT-cG-1l5" firstAttribute="leading" secondItem="H3d-dI-EyA" secondAttribute="leading" id="2JT-Iy-npW"/>
+                                                        <constraint firstItem="gOF-fE-qGq" firstAttribute="top" secondItem="FaV-ho-Ldm" secondAttribute="bottom" constant="8" id="5xX-zG-PN8"/>
+                                                        <constraint firstItem="H3d-dI-EyA" firstAttribute="top" secondItem="UCJ-rA-8Oz" secondAttribute="topMargin" constant="-6" id="Nhh-co-cXQ"/>
+                                                        <constraint firstItem="H3d-dI-EyA" firstAttribute="trailing" secondItem="UCJ-rA-8Oz" secondAttribute="trailingMargin" id="OCc-pd-xhG"/>
+                                                        <constraint firstItem="wFy-1c-8zR" firstAttribute="leading" secondItem="UCJ-rA-8Oz" secondAttribute="leading" id="S8F-0G-8NE"/>
+                                                        <constraint firstItem="KHT-cG-1l5" firstAttribute="leading" secondItem="gOF-fE-qGq" secondAttribute="trailing" constant="-1" id="Tv3-lq-fua"/>
+                                                        <constraint firstItem="KHT-cG-1l5" firstAttribute="trailing" secondItem="UCJ-rA-8Oz" secondAttribute="trailingMargin" id="XKz-Qh-gW3"/>
+                                                        <constraint firstItem="wFy-1c-8zR" firstAttribute="top" secondItem="UCJ-rA-8Oz" secondAttribute="topMargin" constant="-14" id="ZU8-4F-zZO"/>
+                                                        <constraint firstItem="KHT-cG-1l5" firstAttribute="bottom" secondItem="gOF-fE-qGq" secondAttribute="bottom" id="ZuE-V6-AMN"/>
+                                                        <constraint firstItem="H3d-dI-EyA" firstAttribute="leading" secondItem="FaV-ho-Ldm" secondAttribute="trailing" constant="-1" id="ZzU-bd-tdv"/>
+                                                        <constraint firstAttribute="bottom" secondItem="wFy-1c-8zR" secondAttribute="bottom" id="abU-iS-mfA"/>
+                                                        <constraint firstItem="gOF-fE-qGq" firstAttribute="leading" secondItem="wFy-1c-8zR" secondAttribute="trailing" constant="8" id="eKS-Xn-0jC"/>
+                                                        <constraint firstItem="FaV-ho-Ldm" firstAttribute="leading" secondItem="wFy-1c-8zR" secondAttribute="trailing" constant="8" id="fsk-DU-7qF"/>
+                                                        <constraint firstAttribute="topMargin" secondItem="FaV-ho-Ldm" secondAttribute="top" id="ymr-AN-bt7"/>
+                                                    </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
                                                     <outlet property="deleteButton" destination="H3d-dI-EyA" id="JKf-f3-9L2"/>

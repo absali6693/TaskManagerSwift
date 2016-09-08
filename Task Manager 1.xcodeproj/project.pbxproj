@@ -13,7 +13,7 @@
 		113F05E21D805BDC009C5BDB /* AddTaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113F05E11D805BDC009C5BDB /* AddTaskDelegate.swift */; };
 		113F7CF51D8156FC00F88748 /* TaskViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113F7CF41D8156FC00F88748 /* TaskViewCell.swift */; };
 		11BCD5951D7FF29D00A2C0C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BCD5941D7FF29D00A2C0C0 /* AppDelegate.swift */; };
-		11BCD5971D7FF29D00A2C0C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BCD5961D7FF29D00A2C0C0 /* ViewController.swift */; };
+		11BCD5971D7FF29D00A2C0C0 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BCD5961D7FF29D00A2C0C0 /* SignInViewController.swift */; };
 		11BCD59A1D7FF29D00A2C0C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11BCD5981D7FF29D00A2C0C0 /* Main.storyboard */; };
 		11BCD59D1D7FF29D00A2C0C0 /* Task_Manager_1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11BCD59B1D7FF29D00A2C0C0 /* Task_Manager_1.xcdatamodeld */; };
 		11BCD59F1D7FF29D00A2C0C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11BCD59E1D7FF29D00A2C0C0 /* Assets.xcassets */; };
@@ -22,7 +22,6 @@
 		11BCD5B81D7FF29D00A2C0C0 /* Task_Manager_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BCD5B71D7FF29D00A2C0C0 /* Task_Manager_1UITests.swift */; };
 		11BCD5C61D7FF9D800A2C0C0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BCD5C51D7FF9D800A2C0C0 /* User.swift */; };
 		11BCD5C81D80002E00A2C0C0 /* UserDataSingletonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BCD5C71D80002E00A2C0C0 /* UserDataSingletonClass.swift */; };
-		11BCD5CB1D80009700A2C0C0 /* testClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BCD5CA1D80009700A2C0C0 /* testClass.swift */; };
 		11BCD5CD1D801D4700A2C0C0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BCD5CC1D801D4700A2C0C0 /* SignUpViewController.swift */; };
 		11BCD5CF1D80337A00A2C0C0 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BCD5CE1D80337A00A2C0C0 /* Task.swift */; };
 /* End PBXBuildFile section */
@@ -52,7 +51,7 @@
 		113F7CF41D8156FC00F88748 /* TaskViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewCell.swift; sourceTree = "<group>"; };
 		11BCD5911D7FF29D00A2C0C0 /* Task Manager 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task Manager 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11BCD5941D7FF29D00A2C0C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		11BCD5961D7FF29D00A2C0C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		11BCD5961D7FF29D00A2C0C0 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		11BCD5991D7FF29D00A2C0C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		11BCD59C1D7FF29D00A2C0C0 /* Task_Manager_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Task_Manager_1.xcdatamodel; sourceTree = "<group>"; };
 		11BCD59E1D7FF29D00A2C0C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,7 +65,6 @@
 		11BCD5B91D7FF29D00A2C0C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11BCD5C51D7FF9D800A2C0C0 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		11BCD5C71D80002E00A2C0C0 /* UserDataSingletonClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataSingletonClass.swift; sourceTree = "<group>"; };
-		11BCD5CA1D80009700A2C0C0 /* testClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testClass.swift; sourceTree = "<group>"; };
 		11BCD5CC1D801D4700A2C0C0 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		11BCD5CE1D80337A00A2C0C0 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,12 +118,12 @@
 			isa = PBXGroup;
 			children = (
 				11BCD5941D7FF29D00A2C0C0 /* AppDelegate.swift */,
-				11BCD5961D7FF29D00A2C0C0 /* ViewController.swift */,
 				11BCD5C71D80002E00A2C0C0 /* UserDataSingletonClass.swift */,
+				113F05E11D805BDC009C5BDB /* AddTaskDelegate.swift */,
+				11BCD5961D7FF29D00A2C0C0 /* SignInViewController.swift */,
 				11BCD5CC1D801D4700A2C0C0 /* SignUpViewController.swift */,
 				113F05DD1D8039B3009C5BDB /* DisplayViewController.swift */,
 				113F05DF1D804DD8009C5BDB /* AddEditViewController.swift */,
-				113F05E11D805BDC009C5BDB /* AddTaskDelegate.swift */,
 				11BCD5C51D7FF9D800A2C0C0 /* User.swift */,
 				113F7CF41D8156FC00F88748 /* TaskViewCell.swift */,
 				11BCD5CE1D80337A00A2C0C0 /* Task.swift */,
@@ -135,7 +133,6 @@
 				11BCD5A01D7FF29D00A2C0C0 /* LaunchScreen.storyboard */,
 				11BCD5A31D7FF29D00A2C0C0 /* Info.plist */,
 				11BCD59B1D7FF29D00A2C0C0 /* Task_Manager_1.xcdatamodeld */,
-				11BCD5CA1D80009700A2C0C0 /* testClass.swift */,
 			);
 			path = "Task Manager 1";
 			sourceTree = "<group>";
@@ -295,10 +292,9 @@
 				11BCD5CD1D801D4700A2C0C0 /* SignUpViewController.swift in Sources */,
 				11BCD59D1D7FF29D00A2C0C0 /* Task_Manager_1.xcdatamodeld in Sources */,
 				11BCD5C81D80002E00A2C0C0 /* UserDataSingletonClass.swift in Sources */,
-				11BCD5971D7FF29D00A2C0C0 /* ViewController.swift in Sources */,
+				11BCD5971D7FF29D00A2C0C0 /* SignInViewController.swift in Sources */,
 				113F05E01D804DD8009C5BDB /* AddEditViewController.swift in Sources */,
 				113F7CF51D8156FC00F88748 /* TaskViewCell.swift in Sources */,
-				11BCD5CB1D80009700A2C0C0 /* testClass.swift in Sources */,
 				113F05DE1D8039B3009C5BDB /* DisplayViewController.swift in Sources */,
 				113F05E21D805BDC009C5BDB /* AddTaskDelegate.swift in Sources */,
 				11BCD5951D7FF29D00A2C0C0 /* AppDelegate.swift in Sources */,

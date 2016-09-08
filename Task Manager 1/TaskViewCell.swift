@@ -11,9 +11,9 @@ import UIKit
 class TaskViewCell: UITableViewCell {
 
     
-    @IBOutlet weak var taskLabel: UILabel!
-    @IBOutlet weak var descriptionOfTaskLabel: UILabel!
-    @IBOutlet weak var timeOfTask: UILabel!
+    @IBOutlet weak private var taskLabel: UILabel!
+    @IBOutlet weak private var descriptionOfTaskLabel: UILabel!
+    @IBOutlet weak private var timeOfTask: UILabel!
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var editButton: UIButton!
     var delegate: AddTaskDelegate?

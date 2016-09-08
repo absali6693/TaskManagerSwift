@@ -10,13 +10,13 @@ import UIKit
 
 class AddEditViewController: UIViewController {
     
-    @IBOutlet weak var task: UITextField!
-    @IBOutlet weak var descriptionOfTask: UITextField!
-    @IBOutlet weak var timeOfTask: UITextField!
-    @IBOutlet weak var addEditButton : UIButton!
+    @IBOutlet weak private var task: UITextField!
+    @IBOutlet weak private var descriptionOfTask: UITextField!
+    @IBOutlet weak private var timeOfTask: UITextField!
+    @IBOutlet weak private var addEditButton : UIButton!
+    
     var indexToBeEdited: Int?
     var UserTask: Task?
-    
     var delegate: AddTaskDelegate?
     var edit: Bool = false
     
@@ -47,15 +47,23 @@ class AddEditViewController: UIViewController {
     
     
     @IBAction func addEditTask(sender: AnyObject) {
-        let task = Task(task: self.task.text!,descriptionOfTask: self.descriptionOfTask.text!, timeOfTask: self.timeOfTask.text!)
-        if edit == false {
-            delegate?.addTaskToUser(task)
+        if self.task.text == "" || self.descriptionOfTask.text == "" || timeOfTask.text == "" {
+            let alert = UIAlertController(title: "Error", message: "Please Fill all the Fields", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            
         }
         else {
-            edit = false
-            delegate?.editTaskOfUser(task , index: indexToBeEdited!)
+            let task = Task(task: self.task.text!,descriptionOfTask: self.descriptionOfTask.text!, timeOfTask: self.timeOfTask.text!)
+            if edit == false {
+                delegate?.addTaskToUser(task)
+            }
+            else {
+                edit = false
+                delegate?.editTaskOfUser(task , index: indexToBeEdited!)
+            }
+            self.navigationController?.popViewControllerAnimated(true)
         }
-        self.navigationController?.popViewControllerAnimated(true)
     }
     
     func editTask(task: Task,index: Int)
