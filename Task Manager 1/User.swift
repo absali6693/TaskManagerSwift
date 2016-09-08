@@ -13,12 +13,14 @@ class User: NSObject {
     private var username: String;
     private var password: String;
     private var email: String;
+    private var tasks: Array<Task>
     
-    init(name: String , username: String , password: String , email: String) {
+    init(name: String , username: String , password: String , email: String ) {
         self.name = name
         self.username = username
         self.password = password
         self.email = email
+        self.tasks = []
     }
     
     func getUser() -> User {
@@ -39,6 +41,14 @@ class User: NSObject {
     
     func getEmail() -> String {
         return self.email
+    }
+    
+    func getTasks() -> Array<Task> {
+        return self.tasks
+    }
+    
+    func addTasks(task: Task) {
+        self.tasks.append(task)
     }
     
 }

@@ -17,7 +17,6 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(self.navigationController?.viewControllers)
         // Do any additional setup after loading the view.
     }
 
@@ -33,7 +32,6 @@ class SignUpViewController: UIViewController {
         let userDataSingletonclass = UserDataSingletonClass()
         userDataSingletonclass.addUser(user)
         //To change
-        print(UserDataSingletonClass.userDataArray.count)
         self.navigationController?.popViewControllerAnimated(true)
     }
     
