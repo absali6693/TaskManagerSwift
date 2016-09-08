@@ -17,6 +17,7 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Sign Up" 
         // Do any additional setup after loading the view.
     }
 
@@ -31,8 +32,13 @@ class SignUpViewController: UIViewController {
         let user = User(name: nameTextField.text!,username: usernameTextField.text!,password: passwordTextField.text!,email: emailTextField.text!)
         let userDataSingletonclass = UserDataSingletonClass()
         userDataSingletonclass.addUser(user)
+        let storyboard: UIStoryboard = UIStoryboard(name: "viewsStoryBoard", bundle: nil)
+        let displayViewController = storyboard.instantiateViewControllerWithIdentifier("DisplayViewController") as! DisplayViewController
+        displayViewController.getUser(user)
+        self.navigationController?.viewControllers[0] = displayViewController
+        self.navigationController?.viewControllers.removeAtIndex(1)
         //To change
-        self.navigationController?.popViewControllerAnimated(true)
+//        self.navigationController?.popViewControllerAnimated(true)
     }
     
 

@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Log In-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="SignInViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Task_Manager_1" customModuleProvider="target" sceneMemberID="viewController">
@@ -110,7 +110,7 @@
                             <constraint firstItem="2bD-D3-bZj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dSo-pc-533"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="fpE-Ii-lS3"/>
+                    <navigationItem key="navigationItem" title="Log In" id="fpE-Ii-lS3"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="passwordTextField" destination="xAy-Hm-GT6" id="NgM-nb-hdz"/>
