@@ -30,7 +30,7 @@ class SignUpViewController: UIViewController {
     
     @IBAction func signInButtonClickAction(sender: AnyObject) {
         if (nameTextField.text == "" || usernameTextField.text == "" || passwordTextField.text == "" || emailTextField.text == "" ){
-            let alert = UIAlertController(title: "Error", message: "Please Fill all the Fields", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: GlobalConstants.errorTitle, message: GlobalConstants.errorMessageEmpltFields, preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
         }
@@ -38,7 +38,7 @@ class SignUpViewController: UIViewController {
             let predicate = NSPredicate(format: "getUsername = %@", usernameTextField.text!)
             let filteredArray = (UserDataSingletonClass.userDataArray).filter { predicate.evaluateWithObject($0) }
             if filteredArray.count == 1 {
-                let alert = UIAlertController(title: "Error", message: "Username already exist", preferredStyle: UIAlertControllerStyle.Alert)
+                let alert = UIAlertController(title: GlobalConstants.errorTitle, message: GlobalConstants.errorMessageUserExist, preferredStyle: UIAlertControllerStyle.Alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
                 self.presentViewController(alert, animated: true, completion: nil)
             }
@@ -46,8 +46,8 @@ class SignUpViewController: UIViewController {
                 let user = User(name: nameTextField.text!,username: usernameTextField.text!,password: passwordTextField.text!,email: emailTextField.text!)
                 let userDataSingletonclass = UserDataSingletonClass()
                 userDataSingletonclass.addUser(user)
-                let storyboard: UIStoryboard = UIStoryboard(name: "viewsStoryBoard", bundle: nil)
-                let displayViewController = storyboard.instantiateViewControllerWithIdentifier("DisplayViewController") as! DisplayViewController
+                let storyboard: UIStoryboard = UIStoryboard(name: GlobalConstants.viewStoryBoard, bundle: nil)
+                let displayViewController = storyboard.instantiateViewControllerWithIdentifier(GlobalConstants.displayViewController) as! DisplayViewController
                 displayViewController.getUser(user)
                 self.navigationController?.viewControllers[0] = displayViewController
                 self.navigationController?.viewControllers.removeAtIndex(1)

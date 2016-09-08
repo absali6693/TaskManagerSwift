@@ -62,12 +62,12 @@ class DisplayViewController: UIViewController, AddTaskDelegate, UITableViewDataS
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "addSegue" {
+        if segue.identifier == GlobalConstants.addSegue {
            let addEditViewController = segue.destinationViewController as! AddEditViewController
             addEditViewController.delegate = self
         }
         
-        if segue.identifier == "editSegue" {
+        if segue.identifier == GlobalConstants.editSegue {
             let addEditViewController = segue.destinationViewController as! AddEditViewController
             addEditViewController.delegate = self
             let editButton:UIButton = sender as! UIButton
@@ -78,7 +78,7 @@ class DisplayViewController: UIViewController, AddTaskDelegate, UITableViewDataS
     
     @IBAction func logoutButtonClicked(sender: AnyObject) {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let signInViewController = storyboard.instantiateViewControllerWithIdentifier("SignInViewController") as! SignInViewController
+        let signInViewController = storyboard.instantiateViewControllerWithIdentifier(GlobalConstants.signInViewController) as! SignInViewController
         self.navigationController?.viewControllers.append(signInViewController)
         self.navigationController?.viewControllers.removeAtIndex(0)
     }

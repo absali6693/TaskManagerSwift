@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11310A521D81A927009867E7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11310A511D81A927009867E7 /* Constants.swift */; };
 		113F05DC1D8038A0009C5BDB /* viewsStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 113F05DB1D8038A0009C5BDB /* viewsStoryBoard.storyboard */; };
 		113F05DE1D8039B3009C5BDB /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113F05DD1D8039B3009C5BDB /* DisplayViewController.swift */; };
 		113F05E01D804DD8009C5BDB /* AddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113F05DF1D804DD8009C5BDB /* AddEditViewController.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11310A511D81A927009867E7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		113F05DB1D8038A0009C5BDB /* viewsStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = viewsStoryBoard.storyboard; sourceTree = "<group>"; };
 		113F05DD1D8039B3009C5BDB /* DisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
 		113F05DF1D804DD8009C5BDB /* AddEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEditViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			children = (
 				11BCD5941D7FF29D00A2C0C0 /* AppDelegate.swift */,
 				11BCD5C71D80002E00A2C0C0 /* UserDataSingletonClass.swift */,
+				11310A511D81A927009867E7 /* Constants.swift */,
 				113F05E11D805BDC009C5BDB /* AddTaskDelegate.swift */,
 				11BCD5961D7FF29D00A2C0C0 /* SignInViewController.swift */,
 				11BCD5CC1D801D4700A2C0C0 /* SignUpViewController.swift */,
@@ -298,6 +301,7 @@
 				113F05DE1D8039B3009C5BDB /* DisplayViewController.swift in Sources */,
 				113F05E21D805BDC009C5BDB /* AddTaskDelegate.swift in Sources */,
 				11BCD5951D7FF29D00A2C0C0 /* AppDelegate.swift in Sources */,
+				11310A521D81A927009867E7 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

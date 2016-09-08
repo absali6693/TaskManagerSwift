@@ -27,7 +27,7 @@ class SignInViewController: UIViewController {
     
     @IBAction func signInButtonClickAction(sender: AnyObject) {
         if usernameTextField.text == "" || passwordTextField.text == "" {
-            let alert = UIAlertController(title: "Error", message: "Please Fill all the Fields", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: GlobalConstants.errorTitle, message: GlobalConstants.errorMessageEmpltFields, preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
 
@@ -37,8 +37,8 @@ class SignInViewController: UIViewController {
             let filteredArray = (UserDataSingletonClass.userDataArray).filter { predicate.evaluateWithObject($0) }
             if filteredArray.count == 1 {
                 let user =  filteredArray.last
-                let storyboard: UIStoryboard = UIStoryboard(name: "viewsStoryBoard", bundle: nil)
-                let displayViewController = storyboard.instantiateViewControllerWithIdentifier("DisplayViewController") as! DisplayViewController
+                let storyboard: UIStoryboard = UIStoryboard(name: GlobalConstants.viewStoryBoard, bundle: nil)
+                let displayViewController = storyboard.instantiateViewControllerWithIdentifier(GlobalConstants.displayViewController) as! DisplayViewController
                 displayViewController.getUser(user!)
                 self.navigationController?.viewControllers.append(displayViewController)
                 self.navigationController?.viewControllers.removeAtIndex(0)

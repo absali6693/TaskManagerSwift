@@ -48,7 +48,7 @@ class AddEditViewController: UIViewController {
     
     @IBAction func addEditTask(sender: AnyObject) {
         if self.task.text == "" || self.descriptionOfTask.text == "" || timeOfTask.text == "" {
-            let alert = UIAlertController(title: "Error", message: "Please Fill all the Fields", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: GlobalConstants.errorTitle, message: GlobalConstants.errorMessageEmpltFields, preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
             
